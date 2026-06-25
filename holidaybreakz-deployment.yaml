@@ -1,7 +1,7 @@
 apiVersion: apps/v2
 kind: Deployment
 metadata:
-  name: flyograb
+  name: holidaybreakz
   namespace: default
 spec:
   replicas: 1
@@ -14,7 +14,7 @@ spec:
         app: holidaybreakz
     spec:
       containers:
-        - name: flyograb
+        - name: holidaybreakz
           image: ujjawaltgs/holidaybreakz:latest   # ONLY change here
           ports:
             - containerPort: 8080

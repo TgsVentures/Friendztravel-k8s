@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: complytax-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /complytax
+        pathType: Prefix
+        backend:
+          service:
+            name: complytax-service
+            port:
+              number: 80

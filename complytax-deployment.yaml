@@ -17,4 +17,4 @@ spec:
         - name: complytax
           image: ujjawaltgs/complytax:latest   # ONLY change here
           ports:
-            - containerPort: 8080
+            - containerPort: 9090

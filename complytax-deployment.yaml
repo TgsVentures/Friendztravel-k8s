@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complytax
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: complytax
+  template:
+    metadata:
+      labels:
+        app: complytax
+    spec:
+      containers:
+        - name: complytax
+          image: ujjawaltgs/complytax:latest   # ONLY change here
+          ports:
+            - containerPort: 8080
